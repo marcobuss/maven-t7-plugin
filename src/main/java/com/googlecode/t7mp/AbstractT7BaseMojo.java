@@ -45,7 +45,7 @@ public abstract class AbstractT7BaseMojo extends AbstractMojo {
 
     public static final int DEFAULT_TOMCAT_SHUTDOWN_PORT = 8005;
 
-    public static final String DEFAULT_TOMCAT_VERSION = "7.0.32";
+    public static final String DEFAULT_TOMCAT_VERSION = "7.0.37";
 
     public static final String CONTEXT_PATH_ROOT = "ROOT";
 
@@ -114,6 +114,7 @@ public abstract class AbstractT7BaseMojo extends AbstractMojo {
     protected boolean tomcatSetAwait = true;
 
     /**
+     * If set to <code>true</code> Plugin logging will be enabled. Usefull to see details about dependency resolving.
      * 
      * @parameter expression="${t7.lookInside}" default-value="false"
      * @required
@@ -130,7 +131,7 @@ public abstract class AbstractT7BaseMojo extends AbstractMojo {
 
     /**
      * 
-     * @parameter expression="${t7.tomcatVersion}" default-value="7.0.32"
+     * @parameter expression="${t7.tomcatVersion}" default-value="7.0.37"
      */
     protected String tomcatVersion = DEFAULT_TOMCAT_VERSION;
 
