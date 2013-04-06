@@ -233,14 +233,6 @@ public class BaseConfiguration implements T7Configuration {
         this.lookInside = lookInside;
     }
 
-    /* (non-Javadoc)
-     * @see com.googlecode.t7mp.PluginConfiguration#isResolverUpdateSnapshotsAllways()
-     */
-    @Override
-    public boolean isResolverUpdateSnapshotsAllways() {
-        return resolverUpdateSnapshotsAllways;
-    }
-
     public void setResolverUpdateSnapshotsAllways(boolean resolverUpdateSnapshotsAllways) {
         this.resolverUpdateSnapshotsAllways = resolverUpdateSnapshotsAllways;
     }

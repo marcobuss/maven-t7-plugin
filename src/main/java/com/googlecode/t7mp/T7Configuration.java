@@ -32,8 +32,6 @@ public interface T7Configuration {
 
     boolean isLookInside();
 
-    boolean isResolverUpdateSnapshotsAllways();
-
     String getTomcatVersion();
 
     int getTomcatHttpPort();

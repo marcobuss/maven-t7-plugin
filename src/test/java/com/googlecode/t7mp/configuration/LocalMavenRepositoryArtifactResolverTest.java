@@ -21,7 +21,7 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
-import com.googlecode.t7mp.TomcatArtifact;
+import com.googlecode.t7mp.JarArtifact;
 
 /**
  * 
@@ -32,10 +32,12 @@ public class LocalMavenRepositoryArtifactResolverTest {
 
     @Test
     public void testLocalMavenRepositoryArtifactResolver() throws ResolutionException {
-        TomcatArtifact tomcatArtifact = new TomcatArtifact();
-        tomcatArtifact.setVersion("7.0.22");
+    	JarArtifact jarArtifact = new JarArtifact();
+    	jarArtifact.setArtifactId("junit");
+    	jarArtifact.setGroupId("junit");
+    	jarArtifact.setVersion("4.8.2");
         PluginArtifactResolver resolver = new LocalMavenRepositoryArtifactResolver();
-        File file = resolver.resolveArtifact(tomcatArtifact.getArtifactCoordinates());
+        File file = resolver.resolveArtifact(jarArtifact.getArtifactCoordinates());
         Assert.assertNotNull(file);
         Assert.assertTrue(file.isFile());
         Assert.assertFalse(file.isDirectory());

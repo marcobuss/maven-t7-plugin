@@ -43,7 +43,7 @@ public class ChainedArtifactResolverTest {
     public void testChainedArtifactResolverJunit() throws ResolutionException {
         ChainedArtifactResolver resolver = new ChainedArtifactResolver();
         resolver.addPluginArtifactResolver(new LocalMavenRepositoryArtifactResolver());
-        File file = resolver.resolveArtifact("junit:junit:jar:4.10");
+        File file = resolver.resolveArtifact("junit:junit:jar:4.8.2");
         Assert.assertNotNull(file);
         Assert.assertTrue(file.exists());
     }
